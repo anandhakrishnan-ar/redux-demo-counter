@@ -28,18 +28,13 @@ const Counter = () => {
                     <div className="col-md-12 counter-text">
                         {showCounter && <span>{counter}</span>}
                     </div>
-                    <div className="col-md-3">
-                        <button className="btn btn-primary" onClick={toggle}>Toggle Counter</button>
+                    <div className="col-md-12">
+                        <button className="btn btn-primary col-md-2 m-3" onClick={toggle}>Toggle Counter</button>
+                        {showCounter && <button className="btn btn-success col-md-2 m-3" onClick={incrementCounter}>Increment</button>}
+                        {showCounter && <button className="btn btn-danger col-md-2 m-3" onClick={decrementCounter}>Decrement</button>}
+                        {showCounter && <button className="btn btn-success col-md-2 m-3" onClick={incrementCounterBy5}>Increment by 5</button>}
                     </div>
-                    <div className="col-md-3">
-                        {showCounter && <button className="btn btn-success" onClick={incrementCounter}>Increment</button>}
-                    </div>
-                    <div className="col-md-3">
-                        {showCounter && <button className="btn btn-danger" onClick={decrementCounter}>Decrement</button>}
-                    </div>
-                    <div className="col-md-3">
-                        {showCounter && <button className="btn btn-success" onClick={incrementCounterBy5}>Increment by 5</button>}
-                    </div>
+                   
                    
                 </div>
 
